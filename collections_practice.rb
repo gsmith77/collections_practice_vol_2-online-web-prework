@@ -24,3 +24,20 @@ def remove_non_strings(array)
   array.pop
   return array
 end
+
+def count_elements(array)
+  array.each do |hash|
+    
+   hash[:count] = 0
+   array.each do |name|
+     if name[:name] == hash[:name]
+       hash[:count] +=1
+   end
+  end
+end.uniq
+ end
+ 
+def merge_data(keys, data)
+ keys << data
+ keys
+end
